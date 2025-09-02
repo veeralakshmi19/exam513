@@ -1,0 +1,96 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <style>
+        body {
+            
+            font-family: Arial, sans-serif;
+            background: grey;
+            padding: 20px;
+        }
+        .registration-form {
+            background: pink;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .registration-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .registration-form label {
+            display: block;
+            margin-top: 15px;
+        }
+        .registration-form input,
+        .registration-form select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+        .registration-form button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            background: blue;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .registration-form button:hover {
+            background:blue;
+        }
+    </style>
+</head>
+<body>
+
+    <form class="registration-form" action="/submit_registration" method="post">
+        <h2>School Registration Form</h2>
+
+        <label for="name">Student Name</label>
+        <input type="text" id="name" name="student_name" required>
+
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender" required>
+            <option value="">-- Select --</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label for="class">Class</label>
+        <select id="class" name="class" required>
+            <option value="">-- Select Class --</option>
+            <option value="Nursery">Nursery</option>
+            <option value="KG">KG</option>
+            <option value="1">Class 1</option>
+            <option value="2">Class 2</option>
+            <option value="3">Class 3</option>
+            <option value="4">Class 4</option>
+            <option value="5">Class 5</option>
+            <!-- Add more classes as needed -->
+        </select>
+
+        <label for="email">Parent Email</label>
+        <input type="email" id="email" name="parent_email" required>
+
+        <label for="phone">Parent Contact Number</label>
+        <input type="tel" id="phone" name="parent_phone" pattern="[0-9]{10}" placeholder="1234567890" required>
+
+        <button type="submit">Register</button>
+    </form>
+
+</body>
+</html>
